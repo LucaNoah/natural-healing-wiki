@@ -1,5 +1,18 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>TESTTEST</h1>
+
+{% for article in article_list %}
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">{{ article.title }}</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Read</a>
+  </div>
+</div>
+</div>
+
+{% endfor %}
+
+
 {%endblock%}
