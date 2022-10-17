@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>{{ article.title }}</h1>
+<p>{{ article.author }} | {{ article.created_date }}</p>
+{{ article.description | safe }}
+{{ article.content | safe }}
+
+{%endblock%}
