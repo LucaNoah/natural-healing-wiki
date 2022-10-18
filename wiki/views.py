@@ -25,3 +25,7 @@ class ArticleDetail(View):
                 "comments": comments,
             },
         )
+
+
+def create_article(request):
+    return render(request, 'create_article.html')
