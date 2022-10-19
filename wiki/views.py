@@ -6,7 +6,7 @@ from .models import Article
 class ArticleList(generic.ListView):
   model = Article
   queryset = Article.objects.filter(status=1, approved=True).order_by('-created_date')
-  template_name = 'index.html'
+  template_name = 'article_list.html'
   paginate_by = 8
 
 
@@ -40,3 +40,7 @@ def create_article(request):
 
         return redirect('home')
     return render(request, 'create_article.html')
+
+
+def home_view(request):
+    return render(request, 'index.html')
