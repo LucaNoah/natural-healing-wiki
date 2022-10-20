@@ -6,6 +6,10 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+main {
+  padding: 0 10px;
+}
+
 /* headings */
 h1,
 h2,
@@ -25,8 +29,8 @@ nav {
   padding-right: 2rem;
 }
 
-.fa-twitter {
-  padding-left: 2rem;
+.account-item {
+  padding-right: 2rem;
 }
 
 .fa-brands {
