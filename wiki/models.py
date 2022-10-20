@@ -7,15 +7,14 @@ STATUS = ((0, 'Draft'), (1, 'Published'))
 
 
 class Article(models.Model):
-  title = models.CharField(max_length=200, unique=True)
-  slug = models.SlugField(max_length=200, unique=True)
+  title = models.CharField(max_length=100, unique=True)
+  slug = models.SlugField(max_length=100, unique=True)
   author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='wiki_article')
-  description = models.TextField(max_length=200)
+  description = models.TextField(max_length=300)
   content = models.TextField()
   featured_image = CloudinaryField('image', default='placeholder')
   created_date = models.DateTimeField(auto_now_add=True)
   updated_date = models.DateTimeField(auto_now=True)
-  excerpt = models.TextField(blank=True)
   status = models.IntegerField(choices=STATUS, default=0)
   approved = models.BooleanField(default=False)
 

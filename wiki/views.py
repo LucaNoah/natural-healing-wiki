@@ -34,9 +34,8 @@ def create_article(request):
         author = request.user
         description = request.POST.get('article_description')
         content = request.POST.get('article_content')
-        excerpt = request.POST.get('article_excerpt')
         status = 'article_status' in request.POST
-        Article.objects.create(title=title, slug=slug, author=author, description=description, content=content,  excerpt=excerpt, status=status)
+        Article.objects.create(title=title, slug=slug, author=author, description=description, content=content, status=status)
 
         return redirect('home')
     return render(request, 'create_article.html')

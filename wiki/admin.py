@@ -8,8 +8,8 @@ class ArticleAdmin(SummernoteModelAdmin):
 
   summernote_fields = ('description', 'content')
   prepopulated_fields = {'slug': ('title',)}
-  list_filter = ('status', 'created_date', 'approved')
-  list_display = ('title', 'status', 'author','created_date')
+  list_filter = ('status', 'approved', 'created_date', 'author')
+  list_display = ('title', 'approved', 'status', 'author', 'created_date')
   search_fields = ['title', 'description', 'content']
   actions = ['approve_article']
 
