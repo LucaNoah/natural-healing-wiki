@@ -6,5 +6,8 @@
 <p>{{ article.author }} | {{ article.created_date }}</p>
 {{ article.description | safe }}
 {{ article.content | safe }}
+<a href="/edit/{{ article.id }}">
+  <button>Edit</button>
+</a>
 
 {%endblock%}
