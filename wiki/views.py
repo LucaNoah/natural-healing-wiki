@@ -60,3 +60,9 @@ def edit_article(request, article_id):
         return redirect('all_articles')
 
     return render(request, 'edit_article.html')
+
+
+def delete_article(request, article_id):
+    article = get_object_or_404(Article, id=article_id)
+    article.delete()
+    return redirect('all_articles')
