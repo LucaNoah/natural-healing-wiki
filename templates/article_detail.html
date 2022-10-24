@@ -1,37 +1,45 @@
 {% extends "base.html" %}
 
 {% block content %}
+<div class="row">
+  <div class="col-12 col-sm-12 col-md-8 col-lg-6 col-xl-5 offset-0 offset-md-2 offset-xl-3">
+    <h1>{{ article.title }}</h1>
+    <p>{{ article.author }} | {{ article.created_date }}</p>
+    {{ article.description | safe }}
+    {{ article.content | safe }}
 
-<h1>{{ article.title }}</h1>
-<p>{{ article.author }} | {{ article.created_date }}</p>
-{{ article.description | safe }}
-{{ article.content | safe }}
-<p><a href="/edit/{{ article.id }}">
-    <button class="btn btn-primary">Edit</button>
-  </a></p>
-<p><button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">
-    Delete
-  </button></p>
+    {% if article.author == user %}
+    <p><a href="/edit/{{ article.id }}">
+        <button class="btn btn-primary">Edit</button>
+      </a></p>
+    <p><button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">
+        Delete
+      </button></p>
+    {% endif %}
 
-<!-- Modal -->
-<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Are you sure you want to delete this article?</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        This can not be undone.
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <a href="/delete/{{ article.id }}">
-          <button class="btn btn-danger">Delete</button>
-        </a>
+    <!-- Modal -->
+    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Are you sure you want to delete this article?</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            This can not be undone.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <a href="/delete/{{ article.id }}">
+              <button class="btn btn-danger">Delete</button>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
+
+
 
 {%endblock%}
