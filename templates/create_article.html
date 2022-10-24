@@ -25,9 +25,30 @@
     <label for="id_status">No longer a draft:</label>
     <input type="checkbox" name="article_status" id="id_status">
   </p>
-  <p>
-    <button type="submit">Create Article</button>
-  </p>
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createModal">
+    Create
+  </button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="createModal" tabindex="-1" aria-labelledby="createModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Are you sure you want to create this article?</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Before publication, your article will be checked for accuracy by an administrator.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">Create Article</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </form>
+
+
 
 {%endblock%}
