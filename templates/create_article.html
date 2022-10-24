@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="row">
-  <div class="artircle_form col-12 col-sm-12 col-md-8 col-lg-6 col-xl-5 offset-0 offset-md-2 offset-xl-3">
+  <div class="col-12 col-sm-12 col-md-8 col-lg-6 col-xl-5 offset-0 offset-md-2 offset-xl-3">
     <h1>Create an Article:</h1>
     <form method="POST" action="create-new-article">
       {% csrf_token %}
@@ -14,14 +14,14 @@
         <label for="id_author">Author:</label>
         <input type="text" id="id_author" name="article_author" value="{{ user.username }}" readonly>
       </p>
-      <p>
-        <label for="id_description">Description:</label>
-        <input type="text" maxlength="300" name="article_description" id="id_description">
-      </p>
-      <p>
-        <label for="id_content">Content:</label>
-        <input type="text" name="article_content" id="id_content">
-      </p>
+      <div class="mb-3">
+        <label for="id_description" class="form-label">Description:</label>
+        <textarea class="form-control" rows="3" id="id_description" name="article_description"></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="id_content" class="form-label">Content:</label>
+        <textarea class="form-control" rows="5" id="id_content" name="article_content"></textarea>
+      </div>
       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createModal">
         Create
       </button>
