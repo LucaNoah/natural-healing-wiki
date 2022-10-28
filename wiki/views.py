@@ -24,6 +24,18 @@ class ArticleDetail(View):
         )
 
 
+class UserArticles(generic.ListView):
+  model = Article
+  template_name = 'article_list.html'
+
+  def get_queryset(self):
+    return Article.objects.filter(author=self.request.user).order_by('-created_date')
+
+
+def home_view(request):
+    return render(request, 'index.html')
+
+
 def home_view(request):
     return render(request, 'index.html')
 
@@ -37,7 +49,7 @@ def create_article(request):
         content = request.POST.get('article_content')
         Article.objects.create(title=title, slug=slug, author=author, description=description, content=content)
 
-        return redirect('home')
+        return redirect('all_articles')
     return render(request, 'create_article.html')
 
 
@@ -51,7 +63,9 @@ def edit_article(request, article_id):
         article.save()
         return redirect('all_articles')
 
-    return render(request, 'edit_article.html')
+    return render(request, 'edit_article.html', {
+                "article": article,
+            },)
 
 
 def delete_article(request, article_id):
