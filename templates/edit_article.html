@@ -17,8 +17,8 @@
       </p>
       <div class="mb-3">
         <label for="id_description" class="form-label">Description:</label>
-        <textarea class="form-control" rows="3" id="id_description"
-          name="article_description">{{ article.description | safe }}</textarea>
+        <textarea class="form-control" rows="3" id="id_description" name="article_description"
+          maxlength="300">{{ article.description | safe }}</textarea>
       </div>
       <div class="mb-3">
         <label for="id_content" class="form-label">Content:</label>
