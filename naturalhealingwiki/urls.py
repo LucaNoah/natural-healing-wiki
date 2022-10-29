@@ -18,8 +18,8 @@ from django.urls import path, include
 from wiki.views import create_article
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('summernote/', include('django_summernote.urls')),
-    path('', include('wiki.urls'), name='wiki_urls'),
-    path('accounts/', include('allauth.urls')),
+    path("admin/", admin.site.urls),
+    path("summernote/", include("django_summernote.urls")),
+    path("", include("wiki.urls"), name="wiki_urls"),
+    path("accounts/", include("allauth.urls")),
 ]

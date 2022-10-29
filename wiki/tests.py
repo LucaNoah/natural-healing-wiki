@@ -5,29 +5,30 @@ from django.test import Client
 # tests views.py
 class HomeViewTestCase(TestCase):
     def setUp(self):
-      pass
+        pass
 
     def test_load_view(self):
         c = Client()
-        response = c.get('/')
+        response = c.get(" / ")
         self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'index.html')
+        self.assertTemplateUsed(response, "index.html")
 
 
 class ArticleListTestCase(TestCase):
     def setUp(self):
-      pass
+        pass
 
     def test_load_view(self):
         c = Client()
-        response = c.get('/articles-list')
+        response = c.get("/articles-list")
         self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'article_list.html')
+        self.assertTemplateUsed(response, "article_list.html")
 
 
 # class ArticleDetailTestCase(TestCase):
 #     def setUp(self):
 #       pass
+
 
 #     def test_load_view(self):
 #         c = Client()
@@ -40,6 +41,7 @@ class ArticleListTestCase(TestCase):
 #     def setUp(self):
 #       pass
 
+
 #     def test_load_view(self):
 #         c = Client()
 #         response = c.get('/user-articles')
@@ -49,18 +51,19 @@ class ArticleListTestCase(TestCase):
 
 class CreateArticleTestCase(TestCase):
     def setUp(self):
-      pass
+        pass
 
     def test_load_view(self):
         c = Client()
-        response = c.get('/create-new-article')
+        response = c.get("/create-new-article")
         self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'create_article.html')
+        self.assertTemplateUsed(response, "create_article.html")
 
 
 # class EditArticleTestCase(TestCase):
 #     def setUp(self):
 #       pass
+
 
 #     def test_load_view(self):
 #         c = Client()
@@ -72,6 +75,7 @@ class CreateArticleTestCase(TestCase):
 # class DeleteArticleTestCase(TestCase):
 #     def setUp(self):
 #       pass
+
 
 #     def test_load_view(self):
 #         c = Client()
