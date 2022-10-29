@@ -36,10 +36,6 @@ def home_view(request):
     return render(request, 'index.html')
 
 
-def home_view(request):
-    return render(request, 'index.html')
-
-
 def create_article(request):
     if request.method == 'POST':
         title = request.POST.get('article_title')

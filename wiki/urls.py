@@ -3,7 +3,7 @@ from wiki.views import create_article, home_view, edit_article
 from django.urls import path
 
 urlpatterns = [
-    path('', home_view, name='home'),
+    path('', views.home_view, name='home'),
     path('articles-list', views.ArticleList.as_view(), name='all_articles'),
     path('user-articles', views.UserArticles.as_view(), name='user_articles'),
     path('create-new-article', views.create_article, name='add_article'),
