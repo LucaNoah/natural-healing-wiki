@@ -1,108 +1,152 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# NATURAL HEALING WIKI
+![Screenshot of the website](/static/images_readme/screenshot_responsiveness.PNG)
 
-Welcome LucaNoah,
+Natural Healing Wiki is a web application that is operated similarly to a normal wiki. 
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+The purpose of the application is to share knowledge about natural healing in the form of informative articles and allow users to create new contributions.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+Users can view articles written by other users or administrators and create their own articles. However, only own articles can be edited. Before publication, articles created by users must be checked by administrators for appropriate content and then authenticated.
 
-## Gitpod Reminders
+Click [here](https://natural-healing-wiki.herokuapp.com/) to live site.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
-
-`python3 -m http.server`
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
-------
-
-## Release History
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
-
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
-
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
+## User Stories
 ---
 
-Happy coding!
+GitHub issues was used to document user stories. 
+The following categories were assigned for prioritization purposes: "Must Have", "Should Have", "Could Have" and "Won't Have".
+
+### Fulfilled User Stories
+- As a Site Admin, I can create, read, update and delete articles, so that I can manage my wiki content.
+- As a Site User, I can view a list of all articles, so that I can select one to open & read.
+- As a Site User, I can click on an article, so that I can read the full article.
+- As a Site User, I can register an account, so that I can write articles and comments.
+- As a Site User, I can write an article about natural healing, so that I can enlarge the wiki.
+- As a Site User, I can edit articles, so that I can edit articles I have written myself after they have been created.
+- As a Site User, I can delete articles, so that I can delete self-authored articles after creating them.
+- As a Site Admin, I can approve or disapprove articles written by users, so that I can filter out faulty or unsuitable articles.
+
+### User Stories for next relese
+- As a Site User, I can leave comments on an article, so that I can share my opinion about this article with others.
+- As a Site User, I can view the comments of a specific article, so that I can read the added comments.
+- As a Side Admin, I can approve or disapprove comments written by users, so that I can filter out faulty or unsuitable comments.
+- As a Site User, I can view different categories and choose from them, so that I can view the associated articles.
+- As a Site User, I can choose a category for my written article, so that my article gets assigned a category.
+- As a Site User / Admin, I can create draft articles, so that I can finish writing the content later.
+
+## Agile Methodology
+---
+![Screenshot of the website](/static/images_readme/screenshot_userstories.PNG)
+
+MoSCoW priority setting was used to create an agile project via GitHub Issues. 
+
+Link to the project with live issues can be found [here](https://github.com/users/LucaNoah/projects/8).
+
+
+## Wireframes
+---
+
+## Existing Features
+---
+### - Navbar
+On the left side, the logo is displayed with a link to the home page. Next to it, you can navigate to all articles or the articles created by the logged-in user via a drop-down menu. Further to the right is the navigation element for creating a new article. This element is only linked if the user is logged in. If the user is not logged in, its unusability is represented by a visual missing function. Even further to the right are the options to register or log in. If you are already logged in, logout is displayed there. On the far right are 2 social media icons that are connected to a link to the respective website that opens in a new window.
+
+### - Register
+Via the navbar the user has the possibility to get to a page to register. 
+For this purpose, only username and password are required.
+
+### - Log In
+If the user has already registered, he can navigate via the navbar to the login page to log in with username and password.
+
+### - Log Out
+If the user is logged in, he can navigate to the logout page via the navbar.
+
+### - Home Page
+The home page of the application informs the user about the benefits and the target audience of the website. 
+In addition, procedures are explained in more detail.
+
+### - All Articles
+All authored and authenticated articles are displayed here and listed by authoring date. 
+Clicking on "Read" opens the respective article.
+
+### - User Articles
+In the same dropdown menu as all articles, there is a navigation named "Your Articles" which leads to a page that displays all articles of the currently logged in user in chronological order.
+
+### - Article Detail
+By pressing the "Read" button below an article, the user is redirected to the corresponding article. The title, the name of the author, the date of creation, the description and the content are displayed. If the logged-in user is the author, the buttons "Edit" and "Delete" are visible at the very end.
+
+### - Create Article
+On this page logged in users can write articles. To do this, you are required to enter a title, description and related content. The Author field is automatically filled in based on the username. The author will be informed that his article will be styled and authenticated before publishing. He will also be asked to provide references if necessary. If Create is pressed, the user is asked again via modal whether his interaction should be carried out.
+
+### - Edit Article
+At the bottom of the article detail page, if the logged in user is also the author, the "Edit" button is displayed. This will take the user to a page to edit the associated article. The page is built the same as the page to create an article, with the difference that the fields with the related information are prefilled.
+
+### - Form Validation
+When the user fills in the form to create or edit, it is validated by HTML attributes. 
+The user cannot submit empty fields and is limited in the length of the characters.
+
+### - Delete Article
+At the bottom of the article detail page, if the logged in user is also the author, the "Delete" button is displayed. With this button the user can delete the article from the database after validating the request via modal.
+
+### - Approve article
+As an admin, articles written by users can be authenticated via the admin panel. 
+Only then will they be displayed on the website.
+
+## Future Features
+---
+### - Comments
+It is planned that under the detail view and under the heads for editing and deleting comments from users can be displayed and added via an edit field.
+
+### - Approve Comments
+As an admin, comments written by users can be authenticated via the admin panel. 
+Only then will they be displayed on the website.
+
+### - Categories
+In the same dropdown menu as All Articles and Your Articles, a link to categories should be added where the user can view the corresponding items from different categories.
+These categories should also be available when creating and editing.
+
+## Technologies Used
+---
+### Languages Used
+- HTML5
+- CSS3
+- Python
+- Django
+- jQuery
+- JavaScript
+
+### Technologies and Programs Used
+- GitHub was used for version control and planning/user stories of the agile project. 
+- GitPod was used as IDE to write the actual code and push to GitHub.
+- Heroku was used to deploy the application
+- PostgreSQL was used as database
+
+
+## Code Validation
+---
+### HTML Valiation
+All code of all rendered HTML pages of the project was validated by the [W3C Markup Validation Service](https://validator.w3.org/). 
+
+The errors that occur there cannot be avoided and do not affect the function of the app. They can be considered irrelevant.
+
+### CSS Valiation
+All CSS files of the project have been validated by [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/).
+
+No errors raised.
+
+### Python Validaton
+All Python files of the project were formatted by [Black Code Formatter](https://black.vercel.app/). (PEP8 Standart)
+
+No errors raised.
+
+## Tests
+---
+
+
+## Bugs
+---
+
+## Deployment
+---
+
+## Credits
+---
