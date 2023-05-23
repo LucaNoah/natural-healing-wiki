@@ -97,12 +97,11 @@ WSGI_APPLICATION = "naturalhealingwiki.wsgi.application"
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 
-DATABASES = {"default": dj_database_url.parse("postgres://yfntqhss:XoCXGNpfuxebSrN4fDMu0S5wvBIGLTUC@horton.db.elephantsql.com/yfntqhss")}
+DATABASES = {"default": dj_database_url.parse(os.environ.get("DATABASE_URL"))}
 
 # Use local SQLLite database when running tests.
 # Run tests as below:
 # UNITTESTS=1 python3 manage.py test
-
 if os.environ.get("UNITTESTS"):
     DATABASES = {
         "default": {
