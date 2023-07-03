@@ -29,11 +29,11 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, "templates")
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-ALLOWED_HOSTS = ["natural-healing-wiki.herokuapp.com", "localhost"]
+ALLOWED_HOSTS = ["natural-healing-wiki.herokuapp.com", "localhost", "8000-lucanoah-naturalhealing-7lz9jhfbgxn.ws-eu101.gitpod.io"]
 
 
 # Application definition
@@ -95,14 +95,15 @@ WSGI_APPLICATION = "naturalhealingwiki.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-
-
-DATABASES = {"default": dj_database_url.parse(os.environ.get("DATABASE_URL"))}
-
 # Use local SQLLite database when running tests.
 # Run tests as below:
 # UNITTESTS=1 python3 manage.py test
-if os.environ.get("UNITTESTS"):
+
+if "DATABASE_URL" in os.environ:
+    DATABASES = {
+        "default": dj_database_url.parse(os.environ.get("DATABASE_URL"))
+    }
+else:
     DATABASES = {
         "default": {
             "ENGINE": "django.db.backends.sqlite3",
