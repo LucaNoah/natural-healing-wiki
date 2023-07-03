@@ -33,7 +33,7 @@ DEBUG = True
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-ALLOWED_HOSTS = ["natural-healing-wiki-luno.herokuapp.com", "localhost", "8000-lucanoah-naturalhealing-7lz9jhfbgxn.ws-eu101.gitpod.io"]
+ALLOWED_HOSTS = ["https://natural-healing-wiki-luno-eb81c8388aef.herokuapp.com", "localhost", "8000-lucanoah-naturalhealing-7lz9jhfbgxn.ws-eu101.gitpod.io"]
 
 
 # Application definition
