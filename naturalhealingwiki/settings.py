@@ -29,11 +29,11 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, "templates")
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-ALLOWED_HOSTS = ["https://natural-healing-wiki-luno-eb81c8388aef.herokuapp.com", "localhost", "8000-lucanoah-naturalhealing-7lz9jhfbgxn.ws-eu101.gitpod.io"]
+ALLOWED_HOSTS = ["natural-healing-wiki-luno-eb81c8388aef.herokuapp.com", "8000-lucanoah-naturalhealing-7lz9jhfbgxn.ws-eu101.gitpod.io"]
 
 
 # Application definition
