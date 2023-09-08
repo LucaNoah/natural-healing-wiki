@@ -46,9 +46,9 @@ Link to the project with live issues can be found [here](https://github.com/user
 ---
 The web application was designed on a laptop screen size. This wireframe was used:
 
-![Image Wireframe](/static/images_readme/image_wireframe.jpg)
+![Image Wireframe](/static/images_readme/wireframe-nhw.PNG)
 
-The design has evolved during the development of the project in such a way that the sidebar and footer are omitted and the entire functionality of these two elements gives way to the navbar.
+The design has evolved during the development of the project in such a way that the sidebar was omitted and the entire functionality of these two elements gives way to the navbar.
 
 ## Existing Features
 ---
